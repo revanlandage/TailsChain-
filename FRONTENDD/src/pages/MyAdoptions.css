@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.myadopt-root { min-height: 100vh; background: #f1f3f6; font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; }
+
+/* ===== HEADER ===== */
+.myadopt-header { background: #2874f0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.myadopt-header-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; }
+.myadopt-logo { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.myadopt-logo-img { height: 44px; width: 44px; object-fit: cover; border-radius: 50%; border: 2px solid rgba(255,255,255,0.4); }
+.myadopt-logo-text { color: #fff; font-size: 20px; font-weight: 700; }
+.myadopt-header-right { display: flex; align-items: center; gap: 12px; }
+.back-dash-btn { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3); padding: 7px 16px; border-radius: 4px; font-size: 13px; font-weight: 500; cursor: pointer; font-family: 'Poppins', sans-serif; transition: background 0.2s; }
+.back-dash-btn:hover { background: rgba(255,255,255,0.25); }
+.myadopt-avatar { width: 36px; height: 36px; border-radius: 50%; background: #fb641b; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; }
+.myadopt-initial { color: #fff; font-size: 16px; font-weight: 700; }
+.myadopt-logout { background: none; color: rgba(255,255,255,0.7); border: none; font-size: 13px; cursor: pointer; font-family: 'Poppins', sans-serif; padding: 6px; }
+.myadopt-logout:hover { color: #fff; }
+
+.myadopt-nav { background: #2874f0; border-top: 1px solid rgba(255,255,255,0.15); }
+.myadopt-nav-inner { max-width: 1280px; margin: 0 auto; display: flex; padding: 0 20px; }
+.myadopt-nav-item { background: none; border: none; color: #fff; padding: 10px 20px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; border-bottom: 3px solid #fb641b; }
+
+/* ===== MAIN ===== */
+.myadopt-main { max-width: 1100px; margin: 0 auto; padding: 28px 20px; flex: 1; width: 100%; }
+.myadopt-title { font-size: 20px; font-weight: 700; color: #212121; margin-bottom: 20px; }
+
+/* ===== SUMMARY ===== */
+.myadopt-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+.summary-card { background: #fff; border-radius: 8px; padding: 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 1px 6px rgba(0,0,0,0.07); border-left: 4px solid; }
+.summary-card.total { border-color: #2874f0; }
+.summary-card.approved { border-color: #26a541; }
+.summary-card.pending { border-color: #f9a825; }
+.summary-card.rejected { border-color: #ff6161; }
+.summary-icon { font-size: 28px; }
+.summary-card strong { font-size: 26px; font-weight: 700; color: #212121; display: block; }
+.summary-card p { font-size: 12px; color: #878787; }
+
+/* ===== ADOPTION CARDS ===== */
+.adoption-cards { display: flex; flex-direction: column; gap: 16px; }
+.adoption-card { background: #fff; border-radius: 8px; display: flex; gap: 0; box-shadow: 0 1px 6px rgba(0,0,0,0.08); overflow: hidden; border-left: 5px solid; transition: box-shadow 0.2s; }
+.adoption-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+.adoption-card.status-approved { border-color: #26a541; }
+.adoption-card.status-pending  { border-color: #f9a825; }
+.adoption-card.status-rejected { border-color: #ff6161; }
+
+.adoption-card-left { flex-shrink: 0; }
+.adoption-img-wrap { position: relative; width: 160px; height: 100%; }
+.adoption-img-wrap img { width: 160px; height: 100%; object-fit: cover; display: block; min-height: 160px; }
+.ac-status-badge { position: absolute; bottom: 8px; left: 8px; right: 8px; text-align: center; padding: 4px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.ac-status-badge.approved { background: #26a541; color: #fff; }
+.ac-status-badge.pending  { background: #f9a825; color: #fff; }
+.ac-status-badge.rejected { background: #ff6161; color: #fff; }
+
+.adoption-card-body { flex: 1; padding: 20px; }
+.ac-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+.ac-animal-name { font-size: 20px; font-weight: 700; color: #212121; margin-bottom: 2px; }
+.ac-breed { font-size: 13px; color: #878787; }
+.ac-date { font-size: 12px; color: #878787; flex-shrink: 0; }
+
+.ac-info-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px; }
+.ac-info-item { background: #f8f9ff; border-radius: 6px; padding: 8px 10px; }
+.ac-info-item span { font-size: 11px; color: #878787; display: block; margin-bottom: 2px; }
+.ac-info-item strong { font-size: 13px; font-weight: 600; color: #212121; }
+.ac-info-item strong.green { color: #26a541; }
+.ac-info-item strong.red { color: #ff6161; }
+
+.ac-status-bar { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 6px; font-size: 13px; margin-bottom: 10px; }
+.ac-status-bar.approved { background: #e8f5e9; color: #2e7d32; }
+.ac-status-bar.pending  { background: #fff8e1; color: #f57f17; }
+.ac-status-bar.rejected { background: #ffebee; color: #c62828; }
+.ac-status-bar p { font-weight: 500; }
+
+.ac-tx-row { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #878787; }
+.ac-tx-row code { font-family: monospace; background: #e8f0fe; color: #2874f0; padding: 2px 8px; border-radius: 3px; font-size: 12px; }
+
+.adoption-card-right { flex-shrink: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-left: 1px solid #f1f3f6; min-width: 120px; }
+.view-details-btn { padding: 10px 16px; background: #2874f0; color: #fff; border: none; border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; white-space: nowrap; transition: background 0.2s; }
+.view-details-btn:hover { background: #1a5fd4; }
+.adopted-badge-big { text-align: center; font-size: 12px; font-weight: 700; color: #26a541; background: #e8f5e9; padding: 8px 12px; border-radius: 8px; line-height: 1.6; }
+
+/* ===== EMPTY ===== */
+.myadopt-empty { text-align: center; padding: 80px 20px; }
+.empty-icon { font-size: 72px; margin-bottom: 16px; }
+.myadopt-empty h3 { font-size: 22px; font-weight: 700; color: #212121; margin-bottom: 8px; }
+.myadopt-empty p { font-size: 14px; color: #878787; margin-bottom: 24px; }
+.browse-btn { padding: 12px 28px; background: #fb641b; color: #fff; border: none; border-radius: 4px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; }
+.browse-btn:hover { background: #e85d18; }
+
+/* ===== LOADING ===== */
+.myadopt-loading { display: flex; flex-direction: column; gap: 16px; }
+.adopt-skeleton { height: 180px; border-radius: 8px; background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; }
+@keyframes shimmer { 0%{background-position:200% 0;} 100%{background-position:-200% 0;} }
+
+/* ===== MODAL ===== */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.modal-box { background: #fff; border-radius: 8px; width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; box-shadow: 0 8px 40px rgba(0,0,0,0.2); }
+.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; background: #fff; z-index: 1; }
+.modal-header h3 { font-size: 18px; font-weight: 700; }
+.modal-close { background: none; border: none; font-size: 20px; cursor: pointer; color: #878787; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+.modal-close:hover { background: #f1f3f6; }
+.modal-body { padding: 24px; }
+.modal-animal-row { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f1f3f6; }
+.modal-animal-row img { width: 70px; height: 70px; border-radius: 10px; object-fit: cover; }
+.modal-animal-row h4 { font-size: 18px; font-weight: 700; margin-bottom: 2px; }
+.modal-animal-row p { font-size: 13px; color: #878787; margin-bottom: 6px; }
+.status-chip { padding: 3px 10px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+.status-chip.approved { background: #e8f5e9; color: #2e7d32; }
+.status-chip.pending  { background: #fff8e1; color: #f57f17; }
+.status-chip.rejected { background: #ffebee; color: #c62828; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.detail-row { background: #f8f9ff; border-radius: 6px; padding: 12px; display: flex; flex-direction: column; gap: 3px; }
+.detail-row.full { grid-column: 1 / -1; }
+.detail-row span { font-size: 11px; color: #878787; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.detail-row strong { font-size: 14px; color: #212121; }
+.detail-row code { font-family: monospace; font-size: 12px; background: #e8f0fe; color: #2874f0; padding: 3px 8px; border-radius: 3px; }
+
+/* ===== FOOTER ===== */
+.myadopt-footer { background: #212121; color: #878787; text-align: center; padding: 18px; font-size: 13px; }
+
+@media (max-width: 768px) {
+  .myadopt-summary { grid-template-columns: 1fr 1fr; }
+  .adoption-card { flex-direction: column; }
+  .adoption-img-wrap { width: 100%; height: 200px; }
+  .adoption-img-wrap img { width: 100%; min-height: 200px; }
+  .ac-info-grid { grid-template-columns: 1fr 1fr; }
+  .adoption-card-right { border-left: none; border-top: 1px solid #f1f3f6; flex-direction: row; }
+  .detail-grid { grid-template-columns: 1fr; }
+}

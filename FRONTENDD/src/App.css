@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #2874f0;
+  --orange: #fb641b;
+  --yellow: #f9a825;
+  --green: #26a541;
+  --red: #ff6161;
+  --dark: #212121;
+  --mid: #878787;
+  --light: #f1f3f6;
+  --white: #fff;
+  --border: #e0e0e0;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+  --shadow-lg: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f1f3f6;
+  color: #212121;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-loader {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f3f6;
+}
+
+.paw-spinner {
+  font-size: 48px;
+  animation: spin-paw 1s infinite;
+}
+
+@keyframes spin-paw {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: 'Poppins', sans-serif; }
+input, select, textarea { font-family: 'Poppins', sans-serif; }
